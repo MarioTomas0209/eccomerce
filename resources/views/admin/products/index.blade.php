@@ -50,6 +50,9 @@
                             Name
                         </th>
                         <th scope="col" class="px-6 py-3">
+                            Description
+                        </th>
+                        <th scope="col" class="px-6 py-3">
                             Price
                         </th>
                         <th scope="col" class="px-6 py-3 text-right">
@@ -65,7 +68,15 @@
                             {{ $item->sku }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ $item->name }}
+                            <figure class="mb-2">
+                                <img src="{{ asset('storage/' . $item->image_path) }}" alt="{{ $item->name }}" class="w-20 object-cover shadow-md hover:shadow-xl transition-shadow duration-300">
+                            </figure>
+                            <h3 class="text-gray-600 font-medium hover:text-blue-600 transition-colors duration-200">
+                                {{ $item->name }}
+                            </h3>
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $item->description }}
                         </td>
                         <td class="px-6 py-4">
                             ${{ number_format($item->price, 2) }}
