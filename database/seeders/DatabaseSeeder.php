@@ -28,7 +28,8 @@ class DatabaseSeeder extends Seeder
         File::makeDirectory(storage_path('app/public/products'), 0755, true);
 
         $this->call([
-            FamilySeeder::class
+            FamilySeeder::class,
+            OptionSeeder::class
         ]);
 
         Product::factory(150)->create();

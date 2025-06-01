@@ -10,7 +10,12 @@
         [
             'header' => 'Administrar página'
         ],
-
+        [
+            'name' => 'Options',
+            'icon' => 'fa-solid fa-gear',
+            'route' => route('admin.options.index'),
+            'active' => request()->routeIs('admin.options.*')
+        ],
         [
             'name' => 'Families',
             'icon' => 'fa-solid fa-box-open',
@@ -34,7 +39,7 @@
             'icon' => 'fa-brands fa-product-hunt',
             'route' => route('admin.products.index'),
             'active' => request()->routeIs('admin.products.*')
-        ],
+        ]
         // [
         //     'name' => 'Empresa',
         //     'icon' => 'fa-solid fa-building',

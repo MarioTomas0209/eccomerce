@@ -55,7 +55,7 @@
                         <th scope="col" class="px-6 py-3">
                             Price
                         </th>
-                        <th scope="col" class="px-6 py-3 text-right">
+                        <th scope="col" class="px-6 py-3 text-right" width="10%">
                             Actions
                         </th>
                     </tr>
@@ -83,14 +83,14 @@
                         </td>
                         <td class="text-right">
                             <a href="{{ route('admin.products.edit', $item) }}" class="btn btn-yellow me-2">
-                                Edit
+                                <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             <form action="{{ route('admin.products.destroy', $item) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete the product: {{ $item->name }}?');">
                                 @csrf
                                 @method('DELETE')
 
                                 <button type="submit" class="btn btn-red">
-                                    Delete
+                                    <i class="fa-solid fa-trash-can"></i>
                                 </button>
                             </form>
                         </td>
